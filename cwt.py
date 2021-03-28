@@ -160,13 +160,13 @@ def perform_cwt(sig, scales, wavelet, epsilon=0.1, order=1, plot=False, remove_i
         plt.pcolormesh(to_plot)
         #plt.title('WTMM mask')
         if not np.all(np.diff(scales) == 1):
-            scales_str = ['%.2f' % sc for sc in scales]
+            scales_str = ['%.2f' % sc for sc in np.log(scales)]
             plt.yticks(range(mask.shape[0]), scales_str)
         ax = plt.gca()
-        ax.set_ylim(ax.get_ylim()[::-1])
+        #ax.set_ylim(ax.get_ylim()[::-1]) ## reverse axis of scale
         ax.xaxis.tick_top()
         plt.xlabel('Dilation b')
-        plt.ylabel('Scale a')
+        plt.ylabel('Scale s')
         plt.title('WTMM mask')
         plt.show()
 

@@ -448,10 +448,10 @@ def skeletor(input_mtx, proximity=9, plot=False, scales=None):
             scales_str = ['%.2f' % sc for sc in scales]
             plt.yticks(range(mtx.shape[0]), scales_str)
         ax = plt.gca()
-        ax.set_ylim(ax.get_ylim()[::-1])
+        #ax.set_ylim(ax.get_ylim()[::-1]) ## reverse scale axis
         ax.xaxis.tick_top()
         plt.xlabel('Dilation b')
-        plt.ylabel('Scale a')
+        plt.ylabel('Scale s')
         plt.title('Bifurcations')
         plt.show()
 

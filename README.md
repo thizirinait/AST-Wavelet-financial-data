@@ -1,16 +1,7 @@
-# Wavelet Transform Modulus Maxima
+# AST - Wavelet financial data
 
-This library implements Wavelet Transform Modulus Maxima (WTMM) on top of PyWavelets (pywt)
+The package WTMM is provided by https://github.com/igor-93/wtmm.git
 
-Dependencies:
-- numpy
-- scipy
-- matplotlib (optional)
-- pywt (PyWavelets)
+This project purpose is to study one approach given by Z.R. Struzik (Wavelet methods in financial time-series processing, 2000), which aims at forecasting financial market crashes based on an estimate of the Holder exponent. 
 
-Files:
- - `cwt.py` does Continous Wavelet Transform and contains main function `wtmm()` that runs Wavelet Transform Modulus Maxima
- - `mytracing.py` implements tracing of bifurcations
- - `tests.py` implements some unit tests
- - `_functions.py` is modified file from pywt package. It changes the effective support of wavelet functions to be in range [-1,1] that makes finding the valid areas in wt easier.
- - `example.ipynb` jupyter notebook with example on how to use the library
+This project is related to the MVA course Time Series, taught by Professor L. Oudre.

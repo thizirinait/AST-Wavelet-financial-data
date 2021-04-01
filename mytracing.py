@@ -436,11 +436,11 @@ def skeletor(input_mtx, proximity=9, plot=False, scales=None):
     if plot:
         plt.figure(figsize=(10, 8))
         #plt.title('Bifurcations')
-        colors = ['C0', 'C1', 'C2', 'C3',  'C4', 'C5', 'C6', 'C7']
+        #colors = ['C0', 'C1', 'C2', 'C3',  'C4', 'C5', 'C6', 'C7']
         for n, bif in enumerate(final_list):
             points = bif.get_points()
             rows, cols = zip(*points)
-            plt.plot(cols, rows, 'o', color= colors[n % len(colors)], alpha=0.9)
+            plt.plot(cols, rows, '-', color= 'g', alpha=0.9)
             #print(bif.get_strahler_nr())
             # break
 
